@@ -6,14 +6,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Svelte Camera Viewer</h1>
-
+    <h1 class="title">Svelte Camera Viewer</h1>
     <p class="input_title">IPアドレス</p>
-    <input id="input-ip-a" type="text">
-    <button id="savebtn" value="編集">編集</button>
-    <br>
-    <img src="">
-    <iframe id="iframe-1"></iframe>
+    <div class="insert_div">
+    <button id="savebtn" value="編集" class="changebtn">編集</button>
+    </div>
+    <iframe id="iframe-1" class="cameraview"></iframe>
 
     <script src="js/main.js"></script>
 </body>
