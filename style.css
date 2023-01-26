@@ -4,10 +4,44 @@ body{
   background-color: #144998;
 }
 
-h1{
+.title{
   color: white;
+  margin: 20px;
 }
 
 .input_title{
   color: white;
+  margin: 20px;
+}
+
+.insert_div{
+  display: flex;
+}
+
+.input-ip-a{
+  margin: 0px 20px;
+  height: 25px;
+  width: 130px;
+  font-size: 110%;
+}
+
+.changebtn{
+  margin: 0px 0px;
+  order: 2;
+}
+
+.p-ip-a{
+  margin: 0px 20px 0px 20px;
+  height: 25px;
+  width: 130px;
+  font-size: 100%;
+  color: white;
+  border: 1px dashed white;
+  order: 1;
+  /* border: 1px dashed red;
+  border-width: 1px 1px; */
+}
+
+.cameraview{
+  margin: 20px;
 }
