@@ -4,39 +4,39 @@ inputtag.setAttribute('class','input-ip-a');
 const ptag = document.createElement('p');
 ptag.setAttribute('class','p-ip-a');
 const div = document.getElementById('insert_div');
-var ipaddress;
+let ipaddress;
 div.appendChild(ptag);
 const cameraview = document.getElementById('iframe-1');
+edit_btn_flag = false;
 
-var data = localStorage.getItem('data');
-if (data ==null){
-  data = ''
+let IPaddress_value = localStorage.getItem('IPaddress_value');
+if (IPaddress_value ==null){
+  IPaddress_value = ''
 }
-inputtag.setAttribute('value',data);
-ptag.textContent = data;
+inputtag.setAttribute('value',IPaddress_value);
+ptag.textContent = IPaddress_value;
 
 inputtag.addEventListener('input', (event) => {
-  
   ipaddress = event.target.value
 })
 
-savebtn.addEventListener('click', () => {
+function edit_click_action(){
   const iframe_src = `http://${ipaddress}:7011/ImageViewer?Mode=Motion&Resolution=320x240&Quality=Standard&Interval=10`
   cameraview.src = iframe_src
   // savebtn.textContent="NO";
-
-  if(savebtn.textContent=="編集"){
+  edit_btn_flag = !edit_btn_flag;
+  if(edit_btn_flag == true){
     savebtn.textContent="保存";
     ptag.remove();
     div.appendChild(inputtag);
   }
-  else if(savebtn.textContent=="保存"){
+  else{
     savebtn.textContent="編集";
     inputtag.remove();
-    localStorage.setItem('data', inputtag.value);
-    var data = localStorage.getItem('data');
-    ptag.textContent = data;
+    localStorage.setItem('IPaddress_value', inputtag.value);
+    let IPaddress_value = localStorage.getItem('IPaddress_value');
+    ptag.textContent = IPaddress_value;
     div.appendChild(ptag);
   
   }
-})
+}
