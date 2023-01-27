@@ -8,11 +8,17 @@
 <body>
     <h1 class="title">Svelte Camera Viewer</h1>
     <p class="input_title">IPアドレス</p>
-    <div class="insert_div">
+    <div class="insert_div" id="insert_div">
     <button id="savebtn" value="編集" class="changebtn">編集</button>
     </div>
+    <p class="input_title2">IPアドレス</p>
+    <div id="insert_div2" class="insert_div2">
+      <button id="savebtn2" value="編集" class="changebtn2">編集</button>
+    </div>
     <iframe id="iframe-1" class="cameraview"></iframe>
+    <iframe id="iframe-2" class="cameraview2"></iframe>
 
     <script src="js/main.js"></script>
+    <script src="js/second.js"></script>
 </body>
 </html>

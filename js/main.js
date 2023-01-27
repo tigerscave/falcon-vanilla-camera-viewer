@@ -1,15 +1,18 @@
 const savebtn = document.getElementById('savebtn');
 const inputtag = document.createElement('input');
 inputtag.setAttribute('class','input-ip-a');
-var data = localStorage.getItem('data');
-inputtag.setAttribute('value',data);
-const cameraview = document.getElementById('iframe-1');
 const ptag = document.createElement('p');
 ptag.setAttribute('class','p-ip-a');
-const div = document.querySelector('div');
+const div = document.getElementById('insert_div');
 var ipaddress;
-
 div.appendChild(ptag);
+const cameraview = document.getElementById('iframe-1');
+
+var data = localStorage.getItem('data');
+if (data ==null){
+  data = ''
+}
+inputtag.setAttribute('value',data);
 ptag.textContent = data;
 
 inputtag.addEventListener('input', (event) => {
@@ -25,7 +28,6 @@ savebtn.addEventListener('click', () => {
   if(savebtn.textContent=="編集"){
     savebtn.textContent="保存";
     ptag.remove();
-    ptag.textContent = data;
     div.appendChild(inputtag);
   }
   else if(savebtn.textContent=="保存"){
