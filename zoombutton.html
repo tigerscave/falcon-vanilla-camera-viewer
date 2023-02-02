@@ -1,11 +1,8 @@
 <html>
 <head>
 <title>Zoom and Preset</title>
-<script>
-</script>
 </head>
 <body>
-  
 
 <a href="http://192.168.1.240:7011/cgi-bin/directctrl?zoom=4" class="btn">Zoom</a>
 <br>
@@ -13,17 +10,29 @@
 <br>
 <iframe src="http://192.168.1.240:7011/ImageViewer?Mode=Motion&Resolution=500x500&Quality=Standard&Interval=10" id='ifr2' width="800px" height="400px"></iframe>
 <br>
-<a href="http://192.168.1.240:7011/cgi-bin/camposiset?presetset=1" class="btn" clickon='clickcancel()'>プリセット1登録</a>
-<a href="http://192.168.1.240:7011/cgi-bin/camposiset?presetset=2" class="btn">プリセット2登録</a>
-<a href="http://192.168.1.240:7011/cgi-bin/camposiset?presetset=3" class="btn">プリセット3登録</a>
+<a href="http://nwcadmin:Passwd34@192.168.1.240:7011/cgi-bin/camposiset?presetset=1" class="btn" onclick="noaction()">プリセット1登録</a>
+<a href="http://nwcadmin:Passwd34@192.168.1.240:7011/cgi-bin/camposiset?presetset=2" class="btn" onclick="noaction()">プリセット2登録</a>
+<a href="http://nwcadmin:Passwd34@192.168.1.240:7011/cgi-bin/camposiset?presetset=3" class="btn" onclick="noaction()">プリセット3登録</a>
 <br>
-<a href="http://192.168.1.240:7011/cgi-bin/camposiset?presetdel=1" class="btn">プリセット1削除</a>
-<a href="http://192.168.1.240:7011/cgi-bin/camposiset?presetdel=2" class="btn">プリセット2削除</a>
-<a href="http://192.168.1.240:7011/cgi-bin/camposiset?presetdel=3" class="btn">プリセット2削除</a>
+<a href="http://nwcadmin:Passwd34@192.168.1.240:7011/cgi-bin/camposiset?presetdel=1" class="btn" onclick="noaction()">プリセット1削除</a>
+<a href="http://nwcadmin:Passwd34@192.168.1.240:7011/cgi-bin/camposiset?presetdel=2" class="btn" onclick="noaction()">プリセット2削除</a>
+<a href="http://nwcadmin:Passwd34@192.168.1.240:7011/cgi-bin/camposiset?presetdel=3" class="btn" onclick="noaction()">プリセット2削除</a>
 <br>
 <a href="http://192.168.1.240:7011/cgi-bin/camctrl?preset=1" class="btn">プリセット1移動</a>
 <a href="http://192.168.1.240:7011/cgi-bin/camctrl?preset=2" class="btn">プリセット2移動</a>
 <a href="http://192.168.1.240:7011/cgi-bin/camctrl?preset=3" class="btn">プリセット3移動</a>
 
 </body>
+
+<script>
+
+  function noaction(){
+    setTimeout(reload,100);
+  }
+
+  function reload() {
+    location.reload();
+  }
+
+  </script>
 </html>
