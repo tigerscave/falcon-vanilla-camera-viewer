@@ -4,10 +4,88 @@ body{
   background-color: #144998;
 }
 
-h1{
+.title{
   color: white;
+  margin: 20px;
 }
 
 .input_title{
   color: white;
+  margin: 20px;
+}
+
+.insert_div{
+  display: flex;
+}
+
+.input-ip-a{
+  margin: 0px 20px;
+  height: 25px;
+  width: 130px;
+  font-size: 110%;
+}
+
+.changebtn{
+  margin: 0px 0px;
+  order: 2;
+}
+
+.p-ip-a{
+  margin: 0px 20px 0px 20px;
+  height: 25px;
+  width: 130px;
+  font-size: 100%;
+  color: white;
+  border: 1px dashed white;
+  order: 1;
+}
+
+.cameraview{
+  margin: 20px;
+  position: relative;
+  bottom: 70px;
+}
+
+/* 以下second.js */
+
+.input_title2{
+  color: white;
+  margin: 20px;
+  position: relative;
+  top: 300px;
+}
+
+.insert_div2{
+  display: flex;
+  position: relative;
+  top: 300px;
+}
+
+.input-ip-b{
+  margin: 0px 20px;
+  height: 25px;
+  width: 130px;
+  font-size: 110%;
+}
+
+.changebtn2{
+  margin: 0px 0px;
+  order: 2;
+}
+
+.p-ip-b{
+  margin: 0px 20px 0px 20px;
+  height: 25px;
+  width: 130px;
+  font-size: 100%;
+  color: white;
+  border: 1px dashed white;
+  order: 1;
+}
+
+.cameraview2{
+  margin: 20px;
+  display: flex;
+  position: relative;
+  top: 130px;
 }
